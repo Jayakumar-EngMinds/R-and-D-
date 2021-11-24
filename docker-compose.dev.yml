@@ -1,0 +1,10 @@
+version: "3"
+services:
+
+  strapi:
+    stdin_open: true
+    tty: true
+
+  db:
+    stdin_open: true
+    tty: true
