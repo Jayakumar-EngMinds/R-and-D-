@@ -2,5 +2,8 @@ version: "3"
 services:
 
   strapi:
+    restart: always
+    ports:
+      - 80:1337
     environment:
       - NODE_ENV=production
