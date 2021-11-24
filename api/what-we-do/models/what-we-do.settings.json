@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "what_we_dos",
+  "info": {
+    "name": "what we do",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    },
+    "title_short": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "offerings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "what-we-do.offerings"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    },
+    "our_projects": {
+      "via": "service_category",
+      "collection": "our-projects"
+    }
+  }
+}

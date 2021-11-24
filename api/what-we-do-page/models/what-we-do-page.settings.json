@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "what_we_do_pages",
   "info": {
-    "name": "footer",
+    "name": "what we do page",
     "description": ""
   },
   "options": {
@@ -12,13 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "copyright": {
-      "type": "string"
-    },
-    "navigation": {
+    "testimonials": {
       "type": "component",
       "repeatable": true,
-      "component": "footer.nav"
+      "component": "what-we-do.testimonials"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
     }
   }
 }

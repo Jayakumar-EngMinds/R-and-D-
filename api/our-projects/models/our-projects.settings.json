@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_projects",
+  "info": {
+    "name": "our projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "description_short": {
+      "type": "text",
+      "required": true
+    },
+    "hero_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "service_category": {
+      "model": "what-we-do",
+      "via": "our_projects"
+    }
+  }
+}

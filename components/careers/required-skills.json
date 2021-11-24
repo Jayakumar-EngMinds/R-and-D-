@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_careers_required_skills",
+  "info": {
+    "name": "required_skills",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "skill": {
+      "type": "string"
+    }
+  }
+}

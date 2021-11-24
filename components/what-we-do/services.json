@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_what_we_do_services",
+  "info": {
+    "name": "services",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "service": {
+      "type": "string"
+    }
+  }
+}

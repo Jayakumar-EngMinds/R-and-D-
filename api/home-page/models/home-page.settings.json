@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "home_pages",
   "info": {
-    "name": "footer",
+    "name": "home page",
     "description": ""
   },
   "options": {
@@ -12,13 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "copyright": {
-      "type": "string"
-    },
-    "navigation": {
+    "seo": {
       "type": "component",
-      "repeatable": true,
-      "component": "footer.nav"
+      "repeatable": false,
+      "component": "seo.seo"
     }
   }
 }

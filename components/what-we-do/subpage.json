@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_what_we_do_subpages",
+  "info": {
+    "name": "subpage",
+    "icon": "align-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "title_short": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "offerings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "what-we-do.offerings"
+    }
+  }
+}

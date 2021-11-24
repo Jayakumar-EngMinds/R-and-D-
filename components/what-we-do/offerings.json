@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_what_we_do_offerings",
+  "info": {
+    "name": "offerings",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "what-we-do.services"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

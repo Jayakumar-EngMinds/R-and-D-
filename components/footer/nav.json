@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footer_navs",
+  "info": {
+    "name": "navigation",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "social_networks",
   "info": {
-    "name": "footer",
+    "name": "social networks",
     "description": ""
   },
   "options": {
@@ -12,13 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "copyright": {
-      "type": "string"
-    },
     "navigation": {
       "type": "component",
       "repeatable": true,
-      "component": "footer.nav"
+      "component": "social-networks.navigation"
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_what_we_do_testimonials",
+  "info": {
+    "name": "testimonials",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}
