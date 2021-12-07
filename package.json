@@ -10,8 +10,8 @@
     "strapi": "strapi",
     "docker:build": "docker build . -t en-cms:latest",
     "docker:run": "docker run --env-file .env -p 1337:1337 --rm en-cms",
-    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
-    "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
+    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+    "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
     "docker:down": "docker-compose down"
   },
   "dependencies": {
