@@ -23,7 +23,8 @@
       "pluginOptions": {}
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "title_short": {
       "type": "string"

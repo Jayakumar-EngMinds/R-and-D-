@@ -65,8 +65,13 @@
       "type": "boolean",
       "default": false
     },
-    "description_for_home_slider": {
+    "description_short": {
       "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
     }
   }
 }

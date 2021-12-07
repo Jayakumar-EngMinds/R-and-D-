@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ideas-page",
+      "handler": "ideas-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ideas-page",
+      "handler": "ideas-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ideas-page",
+      "handler": "ideas-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

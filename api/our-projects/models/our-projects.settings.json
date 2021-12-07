@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "richtext"
@@ -29,7 +30,7 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false,
+      "required": true,
       "pluginOptions": {}
     },
     "slug": {
@@ -37,8 +38,13 @@
       "targetField": "title"
     },
     "service_category": {
-      "model": "what-we-do",
-      "via": "our_projects"
+      "via": "our_projects",
+      "model": "what-we-do"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
     }
   }
 }
