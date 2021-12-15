@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple Columns with Tables</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito+Sans&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      /* CLIENT-SPECIFIC STYLES */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+
+      table {
+        border-collapse: collapse !important;
+      }
+
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        text-decoration: underline;
+        color: inherit !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* GMAIL BLUE LINKS */
+      u + #body a {
+        text-decoration: underline;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      /* SAMSUNG MAIL BLUE LINKS */
+      #MessageViewBody a {
+        text-decoration: underline;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      /* Universal styles for links and stuff */
+      a {
+        color: #424242;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      a.button:hover {
+        background-color: #35373b !important;
+      }
+
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .mobile {
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body id="body" style="margin: 0 !important; padding: 0 !important">
+    <!-- font-family: "Libre Baskerville", serif;
+    font-family: "Nunito Sans", sans-serif;
+    font-family: "Roboto", sans-serif; -->
+
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      width="100%"
+    >
+      <tr>
+        <td align="center">
+          <table
+            border="0"
+            class="mobile"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            width="600"
+            style="
+              background-color: #ffffff;
+              color: #424242;
+              font-family: 'Roboto', sans-serif;
+              font-size: 16px;
+              line-height: 19px;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            <!-- Header -->
+            <tr>
+              <td style="padding: 21px 24px">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tr>
+                    <td valign="middle">
+                      <!-- Left column -->
+                      <table
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="49%"
+                      >
+                        <tr>
+                          <td>
+                            <a
+                              href="<%= contactForm.origin %>"
+                              style="
+                                display: inline-block;
+                                text-decoration: none;
+                                font-size: 18px;
+                                line-height: 23px;
+                              "
+                            >
+                              <img
+                                src="https://strapi-indianamonuments.s3.amazonaws.com/logo_9b58bcae09.png"
+                                alt="Engineersmind"
+                                border="0"
+                                style="display: block"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- Right column -->
+                      <table
+                        align="right"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="49%"
+                        height="61"
+                      >
+                        <tr>
+                          <td align="right">
+                            <div>
+                              <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:48px;v-text-anchor:middle;width:143px;" arcsize="17%" stroke="f" fillcolor="#566869">
+                                <w:anchorlock/>
+                                <center>
+                              <![endif]-->
+                              <a
+                                class="button"
+                                href="<%= contactForm.origin %>"
+                                style="
+                                  background-color: #566869;
+                                  border-radius: 8px;
+                                  color: #ffffff;
+                                  display: inline-block;
+                                  font-family: 'Libre Baskerville', serif;
+                                  font-size: 13px;
+                                  font-weight: 700;
+                                  line-height: 48px;
+                                  text-align: center;
+                                  text-decoration: none;
+                                  width: 143px;
+                                  -webkit-text-size-adjust: none;
+                                "
+                                >VISIT SITE</a
+                              >
+                              <!--[if mso]>
+                                </center>
+                              </v:roundrect>
+                            <![endif]-->
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Line separator -->
+            <tr>
+              <td style="border-top: 1px solid #e9ebeb"></td>
+            </tr>
+
+            <!-- Main -->
+            <tr>
+              <td style="padding: 48px 24px 104px">
+                <h1
+                  style="
+                    margin: 0;
+                    font-size: 24px;
+                    line-height: 28px;
+                    font-weight: 700;
+                  "
+                >
+                  Thank you for contacting us!
+                </h1>
+                <p style="margin: 18px 0 0 0">
+                  Dear
+                  <strong style="font-weight: 700">
+                    <%= contactForm.name %>
+                  </strong>
+                </p>
+                <p style="margin: 18px 0 0 0">
+                  We have received your message and we will reply by email as
+                  soon as possible.
+                </p>
+                <p style="margin: 18px 0 0 0">
+                  Thank you, <br />
+                  Engineersmind team.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
