@@ -22,10 +22,7 @@ module.exports = ({ env }) => ({
     settings: {
       defaultFrom: env("EMAIL_DEFAULT_FROM"),
       defaultAdmin: env("EMAIL_DEFAULT_ADMIN"),
-      defaultReplyTo: [
-        env("EMAIL_DEFAULT_REPLY_TO_FIRST"),
-        env("EMAIL_DEFAULT_REPLY_TO_SECOND"),
-      ].filter(Boolean),
+      defaultReplyTo: env("EMAIL_DEFAULT_REPLY_TO_FIRST"),
     },
   },
 });

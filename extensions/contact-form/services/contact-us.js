@@ -37,7 +37,6 @@ exports.sendEmail = async (to, template, contactForm) => {
 exports.getEmailConfig = async (templateName) => {
   const templates = {
     ["admin-contact-us"]: "admin-contact-us",
-    ["customer-review"]: "customer-review",
   };
 
   const templatesFolder = path.join(__dirname, "..", "email-templates");
@@ -77,15 +76,6 @@ exports.getAdminTemplateName = () => {
 };
 
 /**
- * Return customer template name
- * @date 2021-06-22
- * @returns {string}
- */
-exports.getCustomerTemplateName = () => {
-  return "customer-review";
-};
-
-/**
  * Send Email with prepared config
  * @date 2021-06-22
  * @param {string} to email
@@ -109,22 +99,6 @@ exports.sendAdminEmail = async (contactForm) => {
 
   const to = providedSettings.settings.defaultAdmin;
   const templateName = module.exports.getAdminTemplateName();
-
-  const config = await module.exports.getEmailConfig(templateName);
-
-  module.exports.sendEmailWithConfig(to, config, contactForm);
-};
-
-/**
- * Send Email to customer
- * @date 2021-06-22
- * @param {Object} contactForm
- * @returns {void}
- */
-exports.sendCustomerEmail = async (contactForm) => {
-  const to = contactForm.email;
-
-  const templateName = module.exports.getCustomerTemplateName();
 
   const config = await module.exports.getEmailConfig(templateName);
 

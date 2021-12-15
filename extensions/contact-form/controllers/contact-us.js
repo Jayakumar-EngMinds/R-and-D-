@@ -33,8 +33,6 @@ module.exports = {
 
     await contactUsService.sendAdminEmail(contactForm);
 
-    await contactUsService.sendCustomerEmail(contactForm);
-
     ctx.send({
       ok: true,
     });
