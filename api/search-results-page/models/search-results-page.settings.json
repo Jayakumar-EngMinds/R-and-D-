@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "search_results_pages",
   "info": {
-    "name": "footer",
-    "description": ""
+    "name": "search results page"
   },
   "options": {
     "increments": true,
@@ -12,13 +11,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "copyright": {
-      "type": "string"
-    },
-    "navigation": {
+    "seo": {
       "type": "component",
-      "repeatable": true,
-      "component": "footer.nav"
+      "repeatable": false,
+      "component": "seo.seo"
     }
   }
 }
