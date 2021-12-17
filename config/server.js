@@ -7,4 +7,8 @@ module.exports = ({ env }) => ({
       secret: env("ADMIN_JWT_SECRET", "f81ef6fd1133877c68f58feb8d7d64ef"),
     },
   },
+  cors: {
+    enabled: true,
+    origin: ["https://dz9i3m5hmh4kh.cloudfront.net/"],
+  },
 });

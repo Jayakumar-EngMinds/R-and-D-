@@ -29,7 +29,8 @@ module.exports = {
     /**
      * @type {import('../services/contact-us')}
      */
-    const contactUsService = strapi.services["contact-us"];
+    const contactUsService =
+      strapi.plugins["contact-form"].services["contact-us"];
 
     await contactUsService.sendAdminEmail(contactForm);
 
