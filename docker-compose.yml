@@ -1,5 +1,4 @@
-
-version: '3'
+version: "3"
 
 services:
   strapi:
@@ -18,12 +17,25 @@ services:
       - .:/srv/app
     depends_on:
       - db
-    command: 'strapi start'
+    command: "strapi start"
+
+  webhooks:
+    container_name: webhooks
+    image: node:lts-alpine
+    env_file: .env
+    working_dir: /usr/app
+    ports:
+      - 1338:1338
+    volumes:
+      - ./webhooks:/usr/app
+    depends_on:
+      - strapi
+    command: "node content-update-webhook.js"
 
   db:
     container_name: postgres
     image: postgres
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./db:/var/lib/postgresql/data
     environment:
