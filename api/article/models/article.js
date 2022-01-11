@@ -1,28 +1,22 @@
 "use strict";
-const Boom = require("boom");
+const { showError } = require("../../../utils/notification");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
  * to customize this model
  */
 
-function checkCategory(data) {
-  if (!data.category) {
-    const err = new Error("Please select category");
-    const boomError = Boom.boomify(err, {
-      statusCode: 422,
-    });
-    throw boomError;
-  }
-}
-
 module.exports = {
   lifecycles: {
     async beforeCreate(data) {
-      checkCategory(data);
+      if (!data.category) {
+        showError("Please select category", 422);
+      }
     },
-    async beforeUpdate(params, data) {
-      checkCategory(data);
+    async beforeUpdate(_, data) {
+      if (!("published_at" in data) && !data.category) {
+        showError("Please select category", 422);
+      }
     },
   },
 };

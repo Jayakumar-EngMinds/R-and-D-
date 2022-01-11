@@ -1,5 +1,5 @@
 "use strict";
-const Boom = require("boom");
+const { showError } = require("../../../utils/notification");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
@@ -19,11 +19,7 @@ module.exports = {
       const projectsCount = result.toJSON();
 
       if (parseInt(projectsCount.count)) {
-        const err = new Error("Cant be removed. What we do has projects");
-        const boomError = Boom.boomify(err, {
-          statusCode: 400,
-        });
-        throw boomError;
+        showError("Cant be removed. Service has projects", 400);
       }
     },
   },

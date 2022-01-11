@@ -1,5 +1,5 @@
 "use strict";
-const Boom = require("boom");
+const { showError } = require("../../../utils/notification");
 
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
@@ -19,11 +19,7 @@ module.exports = {
       const articleCount = result.toJSON();
 
       if (parseInt(articleCount.count)) {
-        const err = new Error("Cant be removed. Category has articles");
-        const boomError = Boom.boomify(err, {
-          statusCode: 400,
-        });
-        throw boomError;
+        showError("Cant be removed. Category has articles", 400);
       }
     },
   },
