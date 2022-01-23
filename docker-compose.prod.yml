@@ -3,7 +3,35 @@ services:
 
   strapi:
     restart: always
-    ports:
-      - 80:1337
+    expose:
+      - ${PORT:-1337}
     environment:
       - NODE_ENV=production
+
+  nginx:
+    image: nginx:mainline-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NGINX_HOST=api.example.com
+      - NGINX_PORT=80
+      - STRAPI_SERVICE_NAME=strapi
+      - STRAPI_PORT=${PORT:-1337}
+    volumes:
+      - ./data/nginx/templates:/etc/nginx/templates:ro
+      - ./data/certbot/conf:/etc/letsencrypt:ro
+      - ./data/certbot/www:/var/www/certbot:ro
+    depends_on:
+      - strapi
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt:rw
+      - ./data/certbot/www:/var/www/certbot:rw
+    # command: certonly --webroot --webroot-path=/var/www/certbot --email test@test.com --agree-tos --no-eff-email --staging -d api.engineersmind.com -d www.api.engineersmind.com
+    depends_on:
+      - nginx
+      - strapi

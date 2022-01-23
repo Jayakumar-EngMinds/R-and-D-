@@ -4,6 +4,8 @@ services:
   strapi:
     stdin_open: true
     tty: true
+    ports:
+      - 1337:${PORT:-1337}
 
   db:
     stdin_open: true
