@@ -10,6 +10,6 @@ module.exports = ({ env }) => ({
   },
   cors: {
     enabled: true,
-    origin: ["https://dz9i3m5hmh4kh.cloudfront.net/"],
+    origin: ["https://engineersmind.com/"],
   },
 });

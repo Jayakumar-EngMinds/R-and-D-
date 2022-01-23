@@ -10,8 +10,8 @@ services:
       - DATABASE_NAME
       - DATABASE_USERNAME
       - DATABASE_PASSWORD
+      - NGINX_URL
       - DATABASE_CLIENT=postgres
-      - NGINX_URL=api.example.com
     expose:
       - ${PORT:-1337}
     volumes:
