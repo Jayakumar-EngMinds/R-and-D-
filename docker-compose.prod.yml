@@ -10,6 +10,7 @@ services:
 
   nginx:
     image: nginx:mainline-alpine
+    container_name: nginx
     ports:
       - "80:80"
       - "443:443"
@@ -40,3 +41,14 @@ services:
     depends_on:
       - nginx
       - strapi
+
+  restarter:
+    image: docker
+    volumes: [ "/var/run/docker.sock:/var/run/docker.sock" ]
+    command:
+      [
+        "/bin/sh",
+        "-c",
+        "while true; do sleep 6h; docker restart nginx; done"
+      ]
+    restart: unless-stopped
