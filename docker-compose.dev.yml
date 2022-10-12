@@ -1,6 +1,5 @@
 version: "3.9"
 services:
-
   strapi:
     stdin_open: true
     tty: true
@@ -13,6 +12,8 @@ services:
     tty: true
     volumes:
       - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
 volumes:
   db_data:

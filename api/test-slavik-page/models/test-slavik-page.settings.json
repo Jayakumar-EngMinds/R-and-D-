@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "about_us_pages",
+  "collectionName": "test_slavik_pages",
   "info": {
-    "name": "About us page",
-    "description": ""
+    "name": "test-slavik page"
   },
   "options": {
     "increments": true,
@@ -12,10 +11,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "about_us": {
-      "type": "component",
-      "repeatable": false,
-      "component": "about-us.about-us"
+    "title": {
+      "type": "string"
     },
     "seo": {
       "type": "component",
