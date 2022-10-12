@@ -6,7 +6,13 @@ services:
     tty: true
     ports:
       - 1337:${PORT:-1337}
+    command: "strapi develop"
 
   db:
     stdin_open: true
     tty: true
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
