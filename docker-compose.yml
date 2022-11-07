@@ -39,8 +39,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./db:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
     environment:
       POSTGRES_USER: ${DATABASE_USERNAME:?err}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD:?err}

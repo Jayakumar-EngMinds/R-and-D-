@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "our_teams",
+  "collectionName": "our_clients",
   "info": {
-    "name": "our team",
+    "name": "our clients",
     "description": ""
   },
   "options": {
@@ -12,7 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "avatar": {
+    "title": {
+      "type": "string"
+    },
+    "logo": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -21,22 +24,6 @@
       "plugin": "upload",
       "required": true,
       "pluginOptions": {}
-    },
-    "full_name": {
-      "type": "string",
-      "required": true
-    },
-    "position": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "text",
-      "required": false
-    },
-    "order": {
-      "type": "integer",
-      "default": 99
     }
   }
 }

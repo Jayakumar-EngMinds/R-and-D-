@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tech-stack-page",
+      "handler": "tech-stack-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tech-stack-page",
+      "handler": "tech-stack-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tech-stack-page",
+      "handler": "tech-stack-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

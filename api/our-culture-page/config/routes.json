@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/our-culture-page",
+      "handler": "our-culture-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/our-culture-page",
+      "handler": "our-culture-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/our-culture-page",
+      "handler": "our-culture-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

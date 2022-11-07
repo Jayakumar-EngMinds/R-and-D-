@@ -1,9 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "about_us_pages",
+  "collectionName": "our_team_pages",
   "info": {
-    "name": "About us page",
-    "description": ""
+    "name": "Our team page"
   },
   "options": {
     "increments": true,
@@ -12,11 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "about_us": {
-      "type": "component",
-      "repeatable": false,
-      "component": "about-us.about-us"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,
