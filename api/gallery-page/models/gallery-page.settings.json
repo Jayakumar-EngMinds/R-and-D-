@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "gallery_pages",
+  "info": {
+    "name": "gallery page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": "dynamiczone",
+      "components": [
+        "gallery.gallery-section",
+        "seo.seo"
+      ]
+    }
+  }
+}
