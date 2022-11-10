@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "home_pages",
+  "collectionName": "gallery_pages",
   "info": {
-    "name": "home page",
+    "name": "gallery page",
     "description": ""
   },
   "options": {
@@ -12,15 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": "dynamiczone",
+      "components": [
+        "gallery.gallery-section",
+        "seo.seo"
+      ]
+    },
     "seo": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo"
-    },
-    "certificates": {
-      "type": "component",
-      "repeatable": true,
-      "component": "certificate.certificate"
     }
   }
 }

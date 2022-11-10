@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_gallery_gallery_sections",
+  "info": {
+    "name": "gallery_section",
+    "icon": "anchor"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
