@@ -1,202 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Multiple Columns with Tables</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<style type="text/css">
-			/* CLIENT-SPECIFIC STYLES */
-			body,
-			table,
-			td,
-			a {
-				-webkit-text-size-adjust: 100%;
-				-ms-text-size-adjust: 100%;
-			}
+  <head>
+    <title>Multiple Columns with Tables</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      /* CLIENT-SPECIFIC STYLES */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
 
-			table,
-			td {
-				mso-table-lspace: 0pt;
-				mso-table-rspace: 0pt;
-			}
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
 
-			img {
-				-ms-interpolation-mode: bicubic;
-			}
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
 
-			/* RESET STYLES */
-			img {
-				border: 0;
-				height: auto;
-				line-height: 100%;
-				outline: none;
-				text-decoration: none;
-			}
+      /* RESET STYLES */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
 
-			table {
-				border-collapse: collapse !important;
-			}
+      table {
+        border-collapse: collapse !important;
+      }
 
-			body {
-				height: 100% !important;
-				margin: 0 !important;
-				padding: 0 !important;
-				width: 100% !important;
-			}
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
 
-			/* iOS BLUE LINKS */
-			a[x-apple-data-detectors] {
-				text-decoration: underline;
-				color: inherit !important;
-				font-size: inherit !important;
-				font-family: inherit !important;
-				font-weight: inherit !important;
-				line-height: inherit !important;
-			}
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        text-decoration: underline;
+        color: inherit !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
 
-			/* GMAIL BLUE LINKS */
-			u + #body a {
-				text-decoration: underline;
-				color: inherit;
-				font-size: inherit;
-				font-family: inherit;
-				font-weight: inherit;
-				line-height: inherit;
-			}
+      /* GMAIL BLUE LINKS */
+      u + #body a {
+        text-decoration: underline;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
 
-			/* SAMSUNG MAIL BLUE LINKS */
-			#MessageViewBody a {
-				text-decoration: underline;
-				color: inherit;
-				font-size: inherit;
-				font-family: inherit;
-				font-weight: inherit;
-				line-height: inherit;
-			}
+      /* SAMSUNG MAIL BLUE LINKS */
+      #MessageViewBody a {
+        text-decoration: underline;
+        color: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
 
-			/* Universal styles for links and stuff */
-			a {
-				color: #424242;
-				text-decoration: underline;
-			}
+      /* Universal styles for links and stuff */
+      a {
+        color: #424242;
+        text-decoration: underline;
+      }
 
-			a:hover {
-				text-decoration: none;
-			}
+      a:hover {
+        text-decoration: none;
+      }
 
-			a.button:hover {
-				background-color: #35373b !important;
-			}
+      a.button:hover {
+        background-color: #35373b !important;
+      }
 
-			/* Responsive styles */
-			@media screen and (max-width: 600px) {
-				.mobile {
-					width: 100% !important;
-				}
-			}
-		</style>
-	</head>
+      /* Responsive styles */
+      @media screen and (max-width: 600px) {
+        .mobile {
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
 
-	<body id="body" style="margin: 0 !important; padding: 0 !important">
-		<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-			<tr>
-				<td align="center">
-					<table
-						border="0"
-						class="mobile"
-						cellpadding="0"
-						cellspacing="0"
-						role="presentation"
-						width="600"
-						style="
-							background-color: #ffffff;
-							color: #424242;
-							font-family: 'Roboto', sans-serif;
-							font-size: 16px;
-							line-height: 19px;
-							margin: 0;
-							padding: 0;
-						"
-					>
-						<!-- Header -->
-						<tr>
-							<td style="padding: 21px 24px" align="center">
-								<a
-									href="<%= contactForm.origin %>"
-									style="display: inline-block; text-decoration: none; font-size: 18px; line-height: 23px"
-								>
-									<img
-										src="https://engineersmind-cms.s3.amazonaws.com/engineersmind_logo_dark_f3ad1f13ba.svg"
-										width="122"
-										height="33"
-										alt="Engineersmind"
-										border="0"
-										style="display: block"
-									/>
-								</a>
-							</td>
-						</tr>
+  <body id="body" style="margin: 0 !important; padding: 0 !important">
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      width="100%"
+    >
+      <tr>
+        <td align="center">
+          <table
+            border="0"
+            class="mobile"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            width="600"
+            style="
+              background-color: #ffffff;
+              color: #424242;
+              font-family: 'Roboto', sans-serif;
+              font-size: 16px;
+              line-height: 19px;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            <!-- Header -->
+            <tr>
+              <td style="padding: 21px 24px" align="center">
+                <a
+                  href="<%= contactForm.origin %>"
+                  style="
+                    display: inline-block;
+                    text-decoration: none;
+                    font-size: 18px;
+                    line-height: 23px;
+                  "
+                >
+                  <img
+                    src="https://engineersmind-cms.s3.amazonaws.com/engineersmind_logo_dark_f3ad1f13ba.svg"
+                    width="122"
+                    height="33"
+                    alt="Engineersmind"
+                    border="0"
+                    style="display: block"
+                  />
+                </a>
+              </td>
+            </tr>
 
-						<!-- Line separator -->
-						<tr>
-							<td style="border-top: 1px solid #e9ebeb"></td>
-						</tr>
+            <!-- Line separator -->
+            <tr>
+              <td style="border-top: 1px solid #e9ebeb"></td>
+            </tr>
 
-						<!-- Main -->
-						<tr>
-							<td style="padding: 48px 24px 104px">
-								<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-									<!-- Request details title -->
-									<tr>
-										<td style="padding: 40px 8px 24px">
-											<h2 style="margin: 0; font-size: 24px; font-weight: 700; line-height: 28px">Request details</h2>
-										</td>
-									</tr>
-									<!-- Customer details info  -->
-									<tr>
-										<td bgcolor="#F8F8F8" style="padding: 24px; border-radius: 8px">
-											<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-												<tr>
-													<td>
-														<p style="margin: 0; font-weight: 700">Name</p>
-														<p style="margin: 8px 0 0"><%= contactForm.name %></p>
-													</td>
-												</tr>
-												<tr>
-													<td style="padding-top: 24px">
-														<p style="margin: 0; font-weight: 700">Email</p>
-														<p style="margin: 8px 0 0">
-															<a href="mailto:<%= contactForm.email %>"> <%= contactForm.email %> </a>
-														</p>
-													</td>
-												</tr>
-												<tr>
-													<td style="padding-top: 24px">
-														<p style="margin: 0; font-weight: 700">Phone</p>
-														<p style="margin: 8px 0 0"><%= contactForm.phone %></p>
-													</td>
-												</tr>
-												<tr>
-													<td style="padding-top: 24px">
-														<p style="margin: 0; font-weight: 700">Description</p>
-														<p style="margin: 8px 0 0"><%= contactForm.message %></p>
-													</td>
-												</tr>
-											</table>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-	</body>
+            <!-- Main -->
+            <tr>
+              <td style="padding: 48px 24px 104px">
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <!-- Request details title -->
+                  <tr>
+                    <td style="padding: 40px 8px 24px">
+                      <h2
+                        style="
+                          margin: 0;
+                          font-size: 24px;
+                          font-weight: 700;
+                          line-height: 28px;
+                        "
+                      >
+                        Request details
+                      </h2>
+                    </td>
+                  </tr>
+                  <!-- Customer details info  -->
+                  <tr>
+                    <td
+                      bgcolor="#F8F8F8"
+                      style="padding: 24px; border-radius: 8px"
+                    >
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        width="100%"
+                      >
+                        <tr>
+                          <td>
+                            <p style="margin: 0; font-weight: 700">Name</p>
+                            <p style="margin: 8px 0 0">
+                              <%= contactForm.name %>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 24px">
+                            <p style="margin: 0; font-weight: 700">Job Title</p>
+                            <p style="margin: 8px 0 0">
+                              <%= contactForm.jobTitle %>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 24px">
+                            <p style="margin: 0; font-weight: 700">
+                              Business Email
+                            </p>
+                            <p style="margin: 8px 0 0">
+                              <a href="mailto:<%= contactForm.email %>">
+                                <%= contactForm.email %>
+                              </a>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 24px">
+                            <p style="margin: 0; font-weight: 700">Phone</p>
+                            <p style="margin: 8px 0 0">
+                              <%= contactForm.phone %>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 24px">
+                            <p style="margin: 0; font-weight: 700">
+                              Organization
+                            </p>
+                            <p style="margin: 8px 0 0">
+                              <%= contactForm.organization %>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 24px">
+                            <p style="margin: 0; font-weight: 700">Country</p>
+                            <p style="margin: 8px 0 0">
+                              <%= contactForm.country %>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 24px">
+                            <p style="margin: 0; font-weight: 700">Message</p>
+                            <p style="margin: 8px 0 0">
+                              <%= contactForm.message %>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>

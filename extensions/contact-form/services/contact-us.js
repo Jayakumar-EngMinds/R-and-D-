@@ -32,7 +32,7 @@ exports.sendEmail = async (to, template, contactForm) => {
  * Read email config and template and return configuration
  * @date 2021-06-22
  * @param {string} templateName
- * @returns {Object}
+ * @returns {Promise<Object.<string, string>>}
  */
 exports.getEmailConfig = async (templateName) => {
   const templates = {
@@ -79,9 +79,9 @@ exports.getAdminTemplateName = () => {
  * Send Email with prepared config
  * @date 2021-06-22
  * @param {string} to email
- * @param {Object} config
- * @param {Object} formData
- * @returns {void}
+ * @param {Object.<string, string>} config
+ * @param {Object.<string, string>} formData
+ * @returns {Promise<void>}
  */
 exports.sendEmailWithConfig = async (to, config, formData) => {
   await module.exports.sendEmail(to, config, formData);
@@ -90,8 +90,8 @@ exports.sendEmailWithConfig = async (to, config, formData) => {
 /**
  * Send Email to admin
  * @date 2021-06-22
- * @param {Object} contactForm
- * @returns {void}
+ * @param {Object.<string, string>} contactForm
+ * @returns {Promise<void>}
  */
 exports.sendAdminEmail = async (contactForm) => {
   const providedSettings =

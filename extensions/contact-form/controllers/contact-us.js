@@ -2,7 +2,8 @@
 
 module.exports = {
   send: async (ctx) => {
-    const { name, email, phone, message } = ctx.request.body;
+    const { name, email, phone, message, jobTitle, organization, country } =
+      ctx.request.body;
 
     const origin = ctx.request.header.origin;
 
@@ -21,9 +22,12 @@ module.exports = {
     const contactForm = {
       email,
       name,
+      jobTitle,
       phone,
       message,
       origin,
+      organization,
+      country,
     };
 
     /**

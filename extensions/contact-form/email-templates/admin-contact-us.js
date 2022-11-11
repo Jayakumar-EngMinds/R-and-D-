@@ -5,8 +5,11 @@ const subject = `Contact form submission: <%= contactForm.name %>`;
 const text = `You have received a new message. Here are the details:
 
 Name: <%= contactForm.name %>
-Email: <%= contactForm.email %>
+Job Title: <%= contactForm.jobTitle %>
+Business Email: <%= contactForm.email %>
 Phone: <%= contactForm.phone %>
+Organization: <%= contactForm.organization %>
+Country: <%= contactForm.country %>
 Message: <%= contactForm.message %>
 `;
 
