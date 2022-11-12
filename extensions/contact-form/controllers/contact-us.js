@@ -7,18 +7,6 @@ module.exports = {
 
     const origin = ctx.request.header.origin;
 
-    if (typeof name === "undefined" || !name) {
-      throw strapi.errors.badRequest("No name is given");
-    }
-
-    if (typeof email === "undefined" || !email) {
-      throw strapi.errors.badRequest("No email is given");
-    }
-
-    if (typeof phone === "undefined" || !phone) {
-      throw strapi.errors.badRequest("No phone is given");
-    }
-
     const contactForm = {
       email,
       name,
@@ -29,6 +17,22 @@ module.exports = {
       organization,
       country,
     };
+
+    const requiredFields = [
+      "name",
+      "email",
+      "phone",
+      "jobTitle",
+      "organization",
+      "country",
+    ];
+
+    requiredFields.forEach((field) => {
+      const fieldsValue = contactForm[field];
+      if (typeof fieldsValue === "undefined" || !fieldsValue) {
+        throw strapi.errors.badRequest(`No ${field} is given`);
+      }
+    });
 
     /**
      * @type {import('../services/contact-us')}
