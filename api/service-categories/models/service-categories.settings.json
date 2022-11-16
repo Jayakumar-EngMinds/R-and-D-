@@ -51,6 +51,9 @@
     "service_pages": {
       "via": "service_category",
       "collection": "service-pages"
+    },
+    "sub_title": {
+      "type": "string"
     }
   }
 }
