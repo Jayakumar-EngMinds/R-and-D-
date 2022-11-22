@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_tech_stack_overviews",
+  "info": {
+    "name": "offering",
+    "icon": "american-sign-language-interpreting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

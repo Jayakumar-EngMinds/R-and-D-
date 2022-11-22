@@ -12,21 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "intro_title": {
       "type": "string"
     },
-    "description": {
+    "overview_description": {
       "type": "richtext"
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "intro_title"
     },
     "show_on_home_page": {
       "type": "boolean",
       "default": false
     },
-    "image": {
+    "intro_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -35,6 +35,20 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "intro_sub_title": {
+      "type": "string"
+    },
+    "overview_title": {
+      "type": "string"
+    },
+    "offerings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tech-stack.overview"
+    },
+    "offerings_title": {
+      "type": "string"
     }
   }
 }
