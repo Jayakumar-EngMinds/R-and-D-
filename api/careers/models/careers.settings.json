@@ -24,7 +24,15 @@
       "type": "uid",
       "targetField": "title"
     },
-    "icon": {
+    "required_skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "careers.required-skills"
+    },
+    "intro_sub_title": {
+      "type": "string"
+    },
+    "intro_image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -34,14 +42,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "show_on_home_page": {
-      "type": "boolean",
-      "default": false
-    },
-    "required_skills": {
-      "type": "component",
-      "repeatable": true,
-      "component": "careers.required-skills"
+    "card_description": {
+      "type": "text"
     }
   }
 }
