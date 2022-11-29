@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": true,
       "component": "certificate.certificate"
+    },
+    "tech_partnership": {
+      "type": "component",
+      "repeatable": true,
+      "component": "partnership.tech-partnership"
     }
   }
 }
